@@ -32,6 +32,7 @@ h1 {
     letter-spacing: 6px;
     color: #999;
     white-space: nowrap;
+    margin-top: 4rem;
 }
 
 section {
@@ -55,4 +56,78 @@ section {
 
 #winter {
     background-image: url(media/winter.jpg);
+}
+
+#orbit {
+    border: 1px solid #555;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 24s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#sun {
+    background-color: #FC0;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    border-radius: 50%;
+}
+
+#earth {
+    background-color: #00BAFF;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 164px;
+    left: 16px;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moon {
+    background-color: #999;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 8px;
+    top: -28px;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+footer {
+    padding: 4rem;
+    background-color: #333;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer img {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.3s;
+}
+
+footer a:hover img {
+    transform: scale(1.3);
 }
